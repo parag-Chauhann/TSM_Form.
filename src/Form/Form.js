@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Form.css';
+import Button from './Button/Button';
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -47,15 +48,63 @@ function Form() {
   };
 
   return (
+    <>
+    <div className='background'>
+      <div className='container'>
+        <div className='bubble'>
+          <span style={{'--i': '11'}}></span>
+          <span style={{'--i': '16'}}></span>
+          <span style={{'--i': '24'}}></span>
+          <span style={{'--i': '10'}}></span>
+          <span style={{'--i': '19'}}></span>
+          <span style={{'--i': '23'}}></span>
+          <span style={{'--i': '16'}}></span>
+          <span style={{'--i': '16'}}></span>
+          <span style={{'--i': '19'}}></span>
+          <span style={{'--i': '22'}}></span>
+          <span style={{'--i': '25'}}></span>
+          <span style={{'--i': '22'}}></span>
+          <span style={{'--i': '23'}}></span>
+          <span style={{'--i': '23'}}></span>
+          <span style={{'--i': '13'}}></span>
+          <span style={{'--i': '26'}}></span>
+          <span style={{'--i': '13'}}></span>
+          <span style={{'--i': '1'}}></span>
+          <span style={{'--i': '23'}}></span>
+          <span style={{'--i': '10'}}></span>
+          <span style={{'--i': '14'}}></span>
+          <span style={{'--i': '23'}}></span>
+          <span style={{'--i': '18'}}></span>
+          <span style={{'--i': '16'}}></span>
+          <span style={{'--i': '19'}}></span>
+          <span style={{'--i': '20'}}></span>
+          <span style={{'--i': '22'}}></span>
+          <span style={{'--i': '25'}}></span>
+          <span style={{'--i': '28'}}></span>
+          <span style={{'--i': '21'}}></span>
+          <span style={{'--i': '15'}}></span>
+          <span style={{'--i': '13'}}></span>
+          <span style={{'--i': '26'}}></span>
+      </div>
+    </div>
+    </div>
+
+    {/* Form code */}
     <div className='main'>
+
+      {/* Logo and title */}
       <div className='navbar'>
-        <img
+        <a href='https://www.thesafetymaster.com/' target='blank'>
+          <img
           src='https://www.thesafetymaster.com/wp-content/uploads/2022/11/thesafetymaster-1.png'
           alt='logo'
-        />
+          />
+        </a>
         <h3>Safety Solutions Inquiry & Service Request Form</h3>
       </div>
 
+
+      {/* Form */} 
       <div className='form'>
         <form onSubmit={handleSubmit}>
           <label>
@@ -170,10 +219,12 @@ function Form() {
           {/* Preferred Communication Method */}
           {/* File Upload Option */}
           {/* Consent or Agreement Checkbox */}
-          <button type='submit'>Submit</button>
+          {/* <button type='submit'>Submit</button> */}
+          <Button />
         </form>
       </div>
     </div>
+    </>
   );
 }
 

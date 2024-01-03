@@ -1,4 +1,5 @@
 import './App.css';
+// import Effect from './Form/Effect/Effect';
 import Form from './Form/Form';
 
 function App() {

@@ -1,12 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background: rgb(0,151,70);
+  background: linear-gradient(83deg, rgba(0,151,70,1) 0%, rgba(0,151,70,1) 10%, rgba(255,255,255,1) 100%);
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Push the background behind other content */
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubble{
+  position: relative;
+  display: flex;
+}
+
+.bubble span{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background:white;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44,
+  0 0 50px #D3D3D3,
+  0 0 100px #D3D3D3;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+
+.bubble span:nth-child(even){
+  background:#FF69B4;
+  box-shadow: 0 0 0 10px #FF69B4,
+  0 0 50 0PX #FF69B4,
+  0 0 100px #FF69B4,
+}
+
+@keyframes animate
+{
+  0%
+  {
+      transform: translateY(100vh) scale(0);
+  }
+
+  100%
+  {
+      transform: translateY(-10vh) scale(1);
+  }
+}
+
+
 .navbar {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    /* background-color:white; */
   }
   
 
 .navbar img{
-    height: 8rem;
+    height: 6rem;
+    transition: 0.4s ease-in-out;
+    background-color:white;
+    border-radius: 10px;
+    
+}
+
+.navbar img:hover{
+ cursor: pointer;
+ transform: scale(1.1); 
 }
 
 .navbar h3{
@@ -14,6 +92,7 @@
     font-size: 1.4rem;
     color: #009746;
     transition: 0.5s ease-in-out;
+    text-shadow: 3px 3px 10px #ffffff, 3px 3px 10px #ffffff;
 }
 
 .navbar h3:hover{
@@ -21,8 +100,6 @@
     transform: scale(1.1);
     cursor: pointer;
 }
-
-/* Form.css */
 
 /* Reset default margins and paddings */
 * {
@@ -66,7 +143,7 @@
   
   button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #009746;
     color: white;
     border: none;
     border-radius: 5px;
@@ -74,7 +151,7 @@
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #009746;
   }
   
   /* Additional styling for checkboxes */
